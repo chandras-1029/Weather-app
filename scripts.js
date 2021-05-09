@@ -27,8 +27,8 @@ window.addEventListener('load', () => {
     );
 
     if (navigator.geolocation) {
+        console.log(navigator.geolocation);
         navigator.geolocation.getCurrentPosition(pos => {
-            console.log(pos);
             long = pos.coords.longitude;
             lat = pos.coords.latitude;
 
@@ -40,7 +40,6 @@ window.addEventListener('load', () => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data)
                     const { condition, feelslike_c, feelslike_f, last_updated, location } = data.current;
 
                     //set elemets from API
@@ -68,6 +67,10 @@ window.addEventListener('load', () => {
                     });
                 });
         });
+    }
+    else
+    {
+        alert("Please turn on location service to get the weather!!");
     }
 
     // Function to get the icon id 
