@@ -3,10 +3,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
+    box-sizing: border-box;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -35,11 +35,27 @@ body{
     cursor: pointer;
 }
 
-.degree-section span{
+.unit{
     margin: 10px;
     font-size: 30px;
 }
 
 .degree-section h2{
     font-size: 40px;
+}
+
+.degree{
+    margin: 5px;
+    font-size: 30px;
+    text-align: start;
+}
+
+.copyright{
+    font-size: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    color: white;
+    text-align: right;
 }
